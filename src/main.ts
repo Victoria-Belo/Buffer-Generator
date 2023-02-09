@@ -3,8 +3,11 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true });
-  app.enableCors();
+  const app = await NestFactory.create(AppModule, { cors: true  });
+  app.enableCors({
+    origin: ['*'],      
+    methods: ["GET", "POST"],
+  });
   const config = new DocumentBuilder()
     .setTitle('GeneratorCSV Buffer')
     .setDescription('A simple file uploading. CSV only.')
