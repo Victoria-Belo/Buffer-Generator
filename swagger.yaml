@@ -3,17 +3,21 @@ paths:
   /file:
     post:
       operationId: AppController_uploadFile
-      parameters: []
+      parameters: []      
       requestBody:
-        required: true
-        description: ''
-        content:
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/FileUploadDto'
+          required: true
+          content:
+            multipart/form-data:
+              schema:
+                type: object
+                $ref: '#/components/schemas/FileUploadDto'
+              properties:                
+                fileName:
+                  type: string
+                  format: binary
       responses:
         '201':
-          description: ''
+          description: 'Created'
       tags:
         - file
     get:
@@ -21,7 +25,7 @@ paths:
       parameters: []
       responses:
         '200':
-          description: ''
+          description: 'Created'
       tags:
         - file
 info:
