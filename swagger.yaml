@@ -12,7 +12,7 @@ paths:
                 type: object
                 $ref: '#/components/schemas/FileUploadDto'
               properties:                
-                fileName:
+                file:
                   type: string
                   format: binary
       responses:
