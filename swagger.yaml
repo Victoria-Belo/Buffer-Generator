@@ -18,7 +18,8 @@ paths:
             multipart/form-data:
               schema:
                 type: string
-                format: binary      
+                format: binary  
+                 description: Apenas arquivos csv    
       responses:
         '201':
           description: 'Created'
@@ -27,6 +28,8 @@ paths:
     get:
       operationId: AppController_Hi
       parameters: []
+      schema:
+        type: string       
       responses:
         '200':
           description: 'Created'
