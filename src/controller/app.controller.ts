@@ -27,7 +27,7 @@ export class AppController {
     @UploadedFile(
       new ParseFilePipeBuilder()
         .addFileTypeValidator({
-          fileType: '/csv$/',
+          fileType: 'csv',
         })
         .addMaxSizeValidator({
           maxSize: 1000,
@@ -37,8 +37,7 @@ export class AppController {
         }),
     )
     file: Express.Multer.File,
-  ) {
-    console.log('testando')
+  ) {   
     return this.service.creatingBuffer(file);
   }
   
