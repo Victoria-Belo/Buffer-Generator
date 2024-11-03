@@ -10,7 +10,7 @@ paths:
             multipart/form-data:
               schema:
                 type: object
-                $ref: '#/components/schemas/FileUploadDto'              
+                      
       responses:
         '201':
           description: 'Created'
