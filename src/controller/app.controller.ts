@@ -27,7 +27,7 @@ export class AppController {
     @UploadedFile(
       new ParseFilePipeBuilder()
         .addFileTypeValidator({
-          fileType: 'csv',
+          fileType: '/csv$/',
         })
         .addMaxSizeValidator({
           maxSize: 1000,
