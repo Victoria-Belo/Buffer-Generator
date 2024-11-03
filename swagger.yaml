@@ -1,38 +1,32 @@
 openapi: 3.0.0
-      
 info:
   title: CSV Buffer
-  description: Entre com arquivo csv e obtenha seu binário
+  description: Entre com CSV e resulte seu binário
   version: '1.0'
-  contact: {}
-tags: []
-servers: []
 paths:
   /file:
     post:
       operationId: AppController_uploadFile
-      parameters: []      
       requestBody:
-          required: true
-          content:
-            multipart/form-data:
-              schema:
-                type: string
-                format: binary  
-                 description: Apenas arquivos csv    
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: Apenas arquivos CSV
       responses:
         '201':
-          description: 'Created'
+          description: Created
       tags:
         - file
     get:
       operationId: AppController_Hi
-      parameters: []
-      schema:
-        type: string       
       responses:
         '200':
-          description: 'Created'
+          description: OK
       tags:
         - file
-  
