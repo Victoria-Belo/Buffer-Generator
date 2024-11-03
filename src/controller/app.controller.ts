@@ -38,7 +38,6 @@ export class AppController {
     )
     file: Express.Multer.File,
   ) {
-    console.log('testando')
     return this.service.creatingBuffer(file);
   }
   

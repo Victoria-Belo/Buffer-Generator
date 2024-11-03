@@ -22,8 +22,8 @@
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
-    "@nestjs/platform-express": "^9.0.0",
     "@nestjs/swagger": "^6.2.1",
+    "@types/multer": "^1.4.12",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "spectacle-docs": "^1.1.0"
