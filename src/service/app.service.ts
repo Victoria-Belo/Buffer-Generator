@@ -7,6 +7,6 @@ export class AppService {
   }
   
   hello(){
-    return 'Hi everyone! :D';
+    return 'Isso é um teste!';
   }
 }
